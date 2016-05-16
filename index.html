@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>数字按钮声音提示</title>
+		<link href="css/numSoundSuper.css" rel="stylesheet" />
+
+   		<script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+   		<script src="js/audio.min.js"></script>
+		<script type="text/javascript" src="js/jquery.numSoundSuper.js"></script>
+		<script>
+		$(function(){
+			var a = audiojs.createAll();
+			//调用插件赋予当前所选元素具有输入数字发音功能
+			$("textarea , input").numSoundSuper(a,function(preValue,value) {  
+				console.log('原先的值：'+preValue);
+			  console.log('当前的值：'+value);  
+			});  
+		});
+		</script>
+	</head>
+	<body>
+
+		<!--自定义元素-->
+		<input type="text" />
+		<input type="password" />
+		<textarea></textarea>
+
+
+		<!--默认audio媒体文件元素-不可丢-->
+		<audio id="audio0" src="audio/0.mp3" preload="auto" ></audio>
+		<audio id="audio1" src="audio/1.mp3" preload="auto" ></audio>
+		<audio id="audio2" src="audio/2.mp3" preload="auto" ></audio>
+		<audio id="audio3" src="audio/3.mp3" preload="auto" ></audio>
+		<audio id="audio4" src="audio/4.mp3" preload="auto" ></audio>
+		<audio id="audio5" src="audio/5.mp3" preload="auto" ></audio>
+		<audio id="audio6" src="audio/6.mp3" preload="auto" ></audio>
+		<audio id="audio7" src="audio/7.mp3" preload="auto" ></audio>
+		<audio id="audio8" src="audio/8.mp3" preload="auto" ></audio>
+		<audio id="audio9" src="audio/9.mp3" preload="auto" ></audio>
+
+	</body>
+</html>
